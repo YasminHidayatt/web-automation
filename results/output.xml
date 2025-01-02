@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-01-02T17:14:48.507472" rpa="false" schemaversion="5">
+<suite id="s1" name="Web-Automation" source="E:\web-automation">
+<suite id="s1-s1" name="Test" source="E:\web-automation\test">
+<suite id="s1-s1-s1" name="Feature" source="E:\web-automation\test\Feature">
+<suite id="s1-s1-s1-s1" name="Login" source="E:\web-automation\test\Feature\Login.robot">
+<test id="s1-s1-s1-s1-t1" name="Secenario : Login With user credential succes on Login Page" line="9">
+<kw name="Given user open Browser" owner="browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-02T17:14:50.872373" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-02T17:14:50.871492" elapsed="6.270041"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-01-02T17:14:57.143206" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
+<arg>${chrome_browser}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-01-02T17:14:57.142225" elapsed="1.693350"/>
+</kw>
+<status status="PASS" start="2025-01-02T17:14:50.854120" elapsed="7.982261"/>
+</kw>
+<kw name="And user Input username on login Page" owner="loginpage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT_USERRNAME}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-02T17:14:58.865009" elapsed="0.075709"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-01-02T17:14:58.942644" level="INFO">Clicking button '//input[@placeholder='Username']'.</msg>
+<arg>${INPUT_USERRNAME}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-02T17:14:58.941485" elapsed="0.248638"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-02T17:14:59.192390" level="INFO">Typing text 'standard_user' into text field '//input[@placeholder='Username']'.</msg>
+<arg>${INPUT_USERRNAME}</arg>
+<arg>standard_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-02T17:14:59.191146" elapsed="0.247337"/>
+</kw>
+<status status="PASS" start="2025-01-02T17:14:58.856142" elapsed="0.582946"/>
+</kw>
+<kw name="And user Input password on login Page" owner="loginpage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT_PASSWORD}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-02T17:14:59.462398" elapsed="0.055470"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-01-02T17:14:59.520011" level="INFO">Clicking button '//input[@placeholder='Password']'.</msg>
+<arg>${INPUT_PASSWORD}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-02T17:14:59.518544" elapsed="0.165596"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-02T17:14:59.687765" level="INFO">Typing text 'secret_sauce' into text field '//input[@placeholder='Password']'.</msg>
+<arg>${INPUT_PASSWORD}</arg>
+<arg>secret_sauce</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-02T17:14:59.685005" elapsed="0.178570"/>
+</kw>
+<status status="PASS" start="2025-01-02T17:14:59.453214" elapsed="0.410817"/>
+</kw>
+<kw name="And user click login button on Login Page" owner="loginpage">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-01-02T17:14:59.885039" level="INFO">Clicking button '//input[@value='Login']'.</msg>
+<arg>${BUTTON_LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-02T17:14:59.883284" elapsed="0.396158"/>
+</kw>
+<status status="PASS" start="2025-01-02T17:14:59.873322" elapsed="0.406580"/>
+</kw>
+<kw name="Then user should see header swag lags" owner="dashboardPage">
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-01-02T17:15:00.536982" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-01-02T17:15:00.537827" level="FAIL">Swag Labs</msg>
+<arg>${LABEL_HEADER_TITLE}</arg>
+<arg>${text}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="FAIL" start="2025-01-02T17:15:00.297377" elapsed="0.247466">Swag Labs</status>
+</kw>
+<status status="FAIL" start="2025-01-02T17:15:00.288930" elapsed="0.256597">Swag Labs</status>
+</kw>
+<status status="FAIL" start="2025-01-02T17:14:50.795849" elapsed="9.757676">Swag Labs</status>
+</test>
+<status status="FAIL" start="2025-01-02T17:14:48.821158" elapsed="11.736183"/>
+</suite>
+<status status="FAIL" start="2025-01-02T17:14:48.810412" elapsed="11.751241"/>
+</suite>
+<status status="FAIL" start="2025-01-02T17:14:48.801846" elapsed="11.763390"/>
+</suite>
+<status status="FAIL" start="2025-01-02T17:14:48.570810" elapsed="11.999153"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Web-Automation">Web-Automation</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Test">Web-Automation.Test</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Feature">Web-Automation.Test.Feature</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="Login">Web-Automation.Test.Feature.Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
