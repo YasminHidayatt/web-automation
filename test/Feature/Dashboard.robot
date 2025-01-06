@@ -2,7 +2,6 @@
 Library    SeleniumLibrary
 Library    GherkinParser
 Resource    ../resources/pages/loginpage.robot
-Resource    ../config/browser.robot
 Resource    ../config/testingData.robot
 Resource    ../resources/pages/dashboardpage.robot
 

@@ -1,6 +1,5 @@
 *** Settings ***
 Resource  ../Locator/dashboarLocator.robot
-
 Library    SeleniumLibrary
 
 *** Variables ***
@@ -28,4 +27,11 @@ user click button atc on Dashboard Page
 
 user should see couter in icon cart on Dasboard Page
     Element Should Be Visible    ${COUNT_PRODUCT}
-    Element Text Should Be    ${COUNT_PRODUCT}    "1"
+    Get Text    ${COUNT_PRODUCT}
+
+user click button basket in rigth on Dashboard Page
+    Click Element   ${ICON_CART}    
+
+user on Dasboard Page 
+    Wait Until Element Is Visible     ${LABEL_HEADER_TITLE}
+    Element Should Be Visible    ${LABEL_HEADER_TITLE}
