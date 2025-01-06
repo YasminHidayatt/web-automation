@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-01-03T15:59:58.324162" rpa="false" schemaversion="5">
+<suite id="s1" name="Dashboard" source="e:\web-automation\test\feature\Dashboard.robot">
+<test id="s1-t1" name="Scenario : user should be add to cart product on Dasboard Page" line="18">
+<kw name="Given user login to application" owner="loginpage">
+<kw name="user open Browser" owner="browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-03T15:59:59.472047" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-03T15:59:59.471384" elapsed="96.047607"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-01-03T16:01:35.520691" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
+<arg>${chrome_browser}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-01-03T16:01:35.520021" elapsed="1.726170"/>
+</kw>
+<status status="PASS" start="2025-01-03T15:59:59.468873" elapsed="97.779240"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT_USERRNAME}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-03T16:01:37.248971" elapsed="0.051074"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-03T16:01:37.301506" level="INFO">Typing text 'standard_user' into text field '//input[@placeholder='Username']'.</msg>
+<arg>${INPUT_USERRNAME}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-03T16:01:37.300686" elapsed="0.213849"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-03T16:01:37.515560" level="INFO">Typing text 'secret_sauce' into text field '//input[@placeholder='Password']'.</msg>
+<arg>${INPUT_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-03T16:01:37.515000" elapsed="0.234076"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-01-03T16:01:37.750650" level="INFO">Clicking button '//input[@value='Login']'.</msg>
+<arg>${BUTTON_LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-03T16:01:37.749835" elapsed="0.244847"/>
+</kw>
+<arg>${STANDARD_USER}</arg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2025-01-03T15:59:59.466037" elapsed="98.529238"/>
+</kw>
+<kw name="And user should see product name on Dashboard Page" owner="dashboardpage">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-01-03T16:01:38.343769" level="INFO">Element '//div[@data-test='inventory-item-name']' is displayed.</msg>
+<arg>${LABEL_PRODUCT_NAME}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-03T16:01:37.999165" elapsed="0.346197"/>
+</kw>
+<status status="PASS" start="2025-01-03T16:01:37.997994" elapsed="0.347847"/>
+</kw>
+<kw name="When user click button atc on Dashboard Page" owner="dashboardpage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-03T16:01:38.398292" level="INFO">Clicking element '//button[contains(@class,'btn btn_primary')]'.</msg>
+<arg>${BUTTON_ATC}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-03T16:01:38.397199" elapsed="0.143351"/>
+</kw>
+<status status="PASS" start="2025-01-03T16:01:38.396064" elapsed="0.144857"/>
+</kw>
+<kw name="Then user should see couter in icon cart on Dasboard Page" owner="dashboardpage">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-01-03T16:01:38.606414" level="INFO">Element '//span[@data-test='shopping-cart-badge']' is displayed.</msg>
+<arg>${COUNT_PRODUCT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-03T16:01:38.544209" elapsed="0.062603"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-01-03T16:01:38.607675" level="INFO">Verifying element '//span[@data-test='shopping-cart-badge']' contains exact text '"1"'.</msg>
+<msg time="2025-01-03T16:01:38.770423" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-01-03T16:01:38.771103" level="FAIL">The text of element '//span[@data-test='shopping-cart-badge']' should have been '"1"' but it was '1'.</msg>
+<arg>${COUNT_PRODUCT}</arg>
+<arg>"1"</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="FAIL" start="2025-01-03T16:01:38.607186" elapsed="0.177705">The text of element '//span[@data-test='shopping-cart-badge']' should have been '"1"' but it was '1'.</status>
+</kw>
+<status status="FAIL" start="2025-01-03T16:01:38.542822" elapsed="0.242568">The text of element '//span[@data-test='shopping-cart-badge']' should have been '"1"' but it was '1'.</status>
+</kw>
+<status status="FAIL" start="2025-01-03T15:59:59.449218" elapsed="99.337214">The text of element '//span[@data-test='shopping-cart-badge']' should have been '"1"' but it was '1'.</status>
+</test>
+<status status="FAIL" start="2025-01-03T15:59:58.355448" elapsed="100.434449"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Dashboard">Dashboard</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
