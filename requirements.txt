@@ -10,7 +10,7 @@ pyOpenSSL==22.0.0
 PySocks==1.7.1
 robotframework==5.0.1
 robotframework-pythonlibcore==3.0.0
-robotframework-seleniumlibrary==6.0.0
+robotframework-seleniumlibrary==7.0.1
 selenium==4.3.0
 sniffio==1.2.0
 sortedcontainers==2.4.0

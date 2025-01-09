@@ -1,107 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-01-06T19:33:45.073878" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-01-07T09:33:53.736494" rpa="false" schemaversion="5">
 <suite id="s1" name="Web-Automation" source="E:\web-automation">
 <suite id="s1-s1" name="Test" source="E:\web-automation\test">
 <suite id="s1-s1-s1" name="Feature" source="E:\web-automation\test\feature">
 <suite id="s1-s1-s1-s1" name="Basket" source="E:\web-automation\test\feature\Basket.robot">
-<test id="s1-s1-s1-s1-t1" name="scenario : user should see multiple product on Basket Page" line="22">
+<test id="s1-s1-s1-s1-t1" name="scenario : user should see multiple product on Basket Page (wip)" line="22">
 <kw name="user login to application" owner="loginpage" type="SETUP">
 <kw name="user open Browser" owner="browser">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-01-06T19:33:45.870343" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<msg time="2025-01-07T09:33:54.757098" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-01-06T19:33:45.869529" elapsed="20.499095"/>
+<status status="PASS" start="2025-01-07T09:33:54.756145" elapsed="8.887600"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-01-06T19:34:06.370951" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
+<msg time="2025-01-07T09:34:03.645595" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
 <arg>${chrome_browser}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-01-06T19:34:06.369696" elapsed="3.270390"/>
+<status status="PASS" start="2025-01-07T09:34:03.644550" elapsed="1.083360"/>
 </kw>
-<status status="PASS" start="2025-01-06T19:33:45.866289" elapsed="23.774498"/>
+<status status="PASS" start="2025-01-07T09:33:54.753576" elapsed="9.974911"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${INPUT_USERRNAME}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-06T19:34:09.641520" elapsed="0.086461"/>
+<status status="PASS" start="2025-01-07T09:34:04.729228" elapsed="0.059821"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-01-06T19:34:09.730192" level="INFO">Typing text 'standard_user' into text field '//input[@placeholder='Username']'.</msg>
+<msg time="2025-01-07T09:34:04.790577" level="INFO">Typing text 'standard_user' into text field '//input[@placeholder='Username']'.</msg>
 <arg>${INPUT_USERRNAME}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-06T19:34:09.728958" elapsed="0.350106"/>
+<status status="PASS" start="2025-01-07T09:34:04.789549" elapsed="0.299243"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-01-06T19:34:10.081559" level="INFO">Typing text 'secret_sauce' into text field '//input[@placeholder='Password']'.</msg>
+<msg time="2025-01-07T09:34:05.090566" level="INFO">Typing text 'secret_sauce' into text field '//input[@placeholder='Password']'.</msg>
 <arg>${INPUT_PASSWORD}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-06T19:34:10.079857" elapsed="0.244587"/>
+<status status="PASS" start="2025-01-07T09:34:05.089507" elapsed="0.216395"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-01-06T19:34:10.326304" level="INFO">Clicking button '//input[@value='Login']'.</msg>
+<msg time="2025-01-07T09:34:05.307512" level="INFO">Clicking button '//input[@value='Login']'.</msg>
 <arg>${BUTTON_LOGIN}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-06T19:34:10.325164" elapsed="0.322242"/>
+<status status="PASS" start="2025-01-07T09:34:05.306600" elapsed="0.311424"/>
 </kw>
 <arg>${STANDARD_USER}</arg>
 <arg>${PASSWORD}</arg>
-<status status="PASS" start="2025-01-06T19:33:45.864502" elapsed="24.783849"/>
+<status status="PASS" start="2025-01-07T09:33:54.750664" elapsed="10.867884"/>
 </kw>
 <kw name="Given user on Dasboard Page" owner="dashboardpage">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${LABEL_HEADER_TITLE}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-06T19:34:10.690468" elapsed="0.085942"/>
+<status status="PASS" start="2025-01-07T09:34:05.643596" elapsed="0.099643"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-01-06T19:34:10.812433" level="INFO">Element '//div[text()='Swag Labs']' is displayed.</msg>
+<msg time="2025-01-07T09:34:05.766255" level="INFO">Element '//div[text()='Swag Labs']' is displayed.</msg>
 <arg>${LABEL_HEADER_TITLE}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-06T19:34:10.777208" elapsed="0.035873"/>
+<status status="PASS" start="2025-01-07T09:34:05.743723" elapsed="0.023034"/>
 </kw>
-<status status="PASS" start="2025-01-06T19:34:10.670996" elapsed="0.142592"/>
+<status status="PASS" start="2025-01-07T09:34:05.625628" elapsed="0.141451"/>
 </kw>
 <kw name="When user click button atc on Dashboard Page" owner="dashboardpage">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-06T19:34:10.835572" level="INFO">Clicking element '//button[contains(@class,'btn btn_primary')]'.</msg>
+<msg time="2025-01-07T09:34:05.782409" level="INFO">Clicking element '//button[contains(@class,'btn btn_primary')]'.</msg>
 <arg>${BUTTON_ATC}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-06T19:34:10.834863" elapsed="0.128992"/>
+<status status="PASS" start="2025-01-07T09:34:05.781835" elapsed="0.119401"/>
 </kw>
-<status status="PASS" start="2025-01-06T19:34:10.827404" elapsed="0.136777"/>
+<status status="PASS" start="2025-01-07T09:34:05.775741" elapsed="0.126015"/>
 </kw>
 <kw name="And user click button atc on Dashboard Page" owner="dashboardpage">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-06T19:34:10.993186" level="INFO">Clicking element '//button[contains(@class,'btn btn_primary')]'.</msg>
+<msg time="2025-01-07T09:34:05.926975" level="INFO">Clicking element '//button[contains(@class,'btn btn_primary')]'.</msg>
 <arg>${BUTTON_ATC}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-06T19:34:10.991689" elapsed="0.134529"/>
+<status status="PASS" start="2025-01-07T09:34:05.926105" elapsed="0.131792"/>
 </kw>
-<status status="PASS" start="2025-01-06T19:34:10.978146" elapsed="0.148429"/>
+<status status="PASS" start="2025-01-07T09:34:05.914456" elapsed="0.143798"/>
 </kw>
 <kw name="And user click button basket in rigth on Dashboard Page" owner="dashboardpage">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-06T19:34:11.144773" level="INFO">Clicking element '//a[@data-test='shopping-cart-link']'.</msg>
+<msg time="2025-01-07T09:34:06.071749" level="INFO">Clicking element '//a[@data-test='shopping-cart-link']'.</msg>
 <arg>${ICON_CART}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-06T19:34:11.143825" elapsed="0.159513"/>
+<status status="PASS" start="2025-01-07T09:34:06.070168" elapsed="0.195070"/>
 </kw>
-<status status="PASS" start="2025-01-06T19:34:11.135034" elapsed="0.168904"/>
+<status status="PASS" start="2025-01-07T09:34:06.064877" elapsed="0.200939"/>
 </kw>
 <kw name="Then the calculation of total amount for multiple product on Basket Page" owner="basketpage">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-01-06T19:34:11.320173" level="INFO">${totalAmount} = 0</msg>
+<msg time="2025-01-07T09:34:06.282635" level="INFO">${totalAmount} = 0</msg>
 <var>${totalAmount}</var>
 <arg>0</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-01-06T19:34:11.319034" elapsed="0.001676"/>
+<status status="PASS" start="2025-01-07T09:34:06.281547" elapsed="0.001712"/>
 </kw>
 <kw name="Load get product Data" owner="basketpage">
 <kw name="Get File" owner="OperatingSystem">
-<msg time="2025-01-06T19:34:11.323959" level="INFO" html="true">Getting file '&lt;a href="file://E:\web-automation\resources\productData.yaml"&gt;E:\web-automation\resources\productData.yaml&lt;/a&gt;'.</msg>
-<msg time="2025-01-06T19:34:11.326070" level="INFO">${data} = products:
+<msg time="2025-01-07T09:34:06.288066" level="INFO" html="true">Getting file '&lt;a href="file://E:\web-automation\resources\productData.yaml"&gt;E:\web-automation\resources\productData.yaml&lt;/a&gt;'.</msg>
+<msg time="2025-01-07T09:34:06.289608" level="INFO">${data} = products:
   product1: 
     productName: "Sauce Labs Backpack"
     price: 29.99
@@ -113,23 +113,23 @@
 <var>${data}</var>
 <arg>${path}</arg>
 <doc>Returns the contents of a specified file.</doc>
-<status status="PASS" start="2025-01-06T19:34:11.322942" elapsed="0.003648"/>
+<status status="PASS" start="2025-01-07T09:34:06.286129" elapsed="0.004073"/>
 </kw>
 <kw name="Safe Load" owner="yaml">
-<msg time="2025-01-06T19:34:11.333166" level="INFO">${LOADED} = {'products': {'product1': {'productName': 'Sauce Labs Backpack', 'price': 29.99}, 'product2': {'productName': 'Sauce Labs Bike Light', 'price': 9.99}, 'product3': {'productName': 'Sauce Labs Bolt T-Sh...</msg>
+<msg time="2025-01-07T09:34:06.295707" level="INFO">${LOADED} = {'products': {'product1': {'productName': 'Sauce Labs Backpack', 'price': 29.99}, 'product2': {'productName': 'Sauce Labs Bike Light', 'price': 9.99}, 'product3': {'productName': 'Sauce Labs Bolt T-Sh...</msg>
 <var>${LOADED}</var>
 <arg>${data}</arg>
 <doc>Parse the first YAML document in a stream
 and produce the corresponding Python object.</doc>
-<status status="PASS" start="2025-01-06T19:34:11.327289" elapsed="0.006322"/>
+<status status="PASS" start="2025-01-07T09:34:06.290851" elapsed="0.005299"/>
 </kw>
 <return>
 <value>${LOADED}</value>
-<status status="PASS" start="2025-01-06T19:34:11.334040" elapsed="0.000721"/>
+<status status="PASS" start="2025-01-07T09:34:06.296599" elapsed="0.000497"/>
 </return>
-<msg time="2025-01-06T19:34:11.335596" level="INFO">${loadData} = {'products': {'product1': {'productName': 'Sauce Labs Backpack', 'price': 29.99}, 'product2': {'productName': 'Sauce Labs Bike Light', 'price': 9.99}, 'product3': {'productName': 'Sauce Labs Bolt T-Sh...</msg>
+<msg time="2025-01-07T09:34:06.297649" level="INFO">${loadData} = {'products': {'product1': {'productName': 'Sauce Labs Backpack', 'price': 29.99}, 'product2': {'productName': 'Sauce Labs Bike Light', 'price': 9.99}, 'product3': {'productName': 'Sauce Labs Bolt T-Sh...</msg>
 <var>${loadData}</var>
-<status status="PASS" start="2025-01-06T19:34:11.321543" elapsed="0.014731"/>
+<status status="PASS" start="2025-01-07T09:34:06.284126" elapsed="0.014076"/>
 </kw>
 <for flavor="IN">
 <iter>
@@ -138,64 +138,53 @@ and produce the corresponding Python object.</doc>
 <arg>${loadData['products']}</arg>
 <arg>${product}</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="NOT RUN" start="2025-01-06T19:34:11.340064" elapsed="0.000617"/>
+<status status="NOT RUN" start="2025-01-07T09:34:06.302567" elapsed="0.002540"/>
 </kw>
 <kw name="Dollar Normalizer" owner="basketpage">
 <var>${price}</var>
 <arg>${LABEL_PRODUCT_PRICE}</arg>
-<status status="NOT RUN" start="2025-01-06T19:34:11.341539" elapsed="0.000758"/>
+<status status="NOT RUN" start="2025-01-07T09:34:06.306272" elapsed="0.000633"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
 <var>${totalAmount}</var>
 <arg>${totalAmount} + ${price}</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" start="2025-01-06T19:34:11.343045" elapsed="0.000580"/>
+<status status="NOT RUN" start="2025-01-07T09:34:06.307584" elapsed="0.000549"/>
 </kw>
 <var name="${product}"/>
-<status status="NOT RUN" start="2025-01-06T19:34:11.339201" elapsed="0.005111"/>
+<status status="NOT RUN" start="2025-01-07T09:34:06.301417" elapsed="0.007366"/>
 </iter>
 <var>${product}</var>
 <value>@{productList}</value>
-<status status="NOT RUN" start="2025-01-06T19:34:11.336890" elapsed="0.007774"/>
+<status status="NOT RUN" start="2025-01-07T09:34:06.298645" elapsed="0.010404"/>
 </for>
-<status status="PASS" start="2025-01-06T19:34:11.310770" elapsed="0.034208"/>
-</kw>
-<kw name="|">
-<msg time="2025-01-06T19:34:11.365015" level="FAIL">No keyword with name '|' found.</msg>
-<arg>product1</arg>
-<arg>|</arg>
-<status status="FAIL" start="2025-01-06T19:34:11.358161" elapsed="0.009671">No keyword with name '|' found.</status>
-</kw>
-<kw name="|">
-<arg>product2</arg>
-<arg>|</arg>
-<status status="NOT RUN" start="2025-01-06T19:34:11.376138" elapsed="0.009932"/>
+<status status="PASS" start="2025-01-07T09:34:06.275408" elapsed="0.034008"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-01-06T19:34:11.393250" elapsed="2.676641"/>
+<status status="PASS" start="2025-01-07T09:34:06.315658" elapsed="4.065801"/>
 </kw>
-<status status="FAIL" start="2025-01-06T19:33:45.860036" elapsed="28.210994">No keyword with name '|' found.</status>
+<status status="PASS" start="2025-01-07T09:33:54.745212" elapsed="15.636912"/>
 </test>
-<status status="FAIL" start="2025-01-06T19:33:45.146900" elapsed="28.927045"/>
+<status status="PASS" start="2025-01-07T09:33:53.814169" elapsed="16.570351"/>
 </suite>
-<status status="FAIL" start="2025-01-06T19:33:45.140271" elapsed="28.937645"/>
+<status status="PASS" start="2025-01-07T09:33:53.807440" elapsed="16.580958"/>
 </suite>
-<status status="FAIL" start="2025-01-06T19:33:45.132086" elapsed="28.949306"/>
+<status status="PASS" start="2025-01-07T09:33:53.797292" elapsed="16.595829"/>
 </suite>
-<status status="FAIL" start="2025-01-06T19:33:45.084526" elapsed="29.000833"/>
+<status status="PASS" start="2025-01-07T09:33:53.747404" elapsed="16.649425"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Web-Automation">Web-Automation</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1" name="Test">Web-Automation.Test</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Feature">Web-Automation.Test.Feature</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="Basket">Web-Automation.Test.Feature.Basket</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Web-Automation">Web-Automation</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Test">Web-Automation.Test</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Feature">Web-Automation.Test.Feature</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="Basket">Web-Automation.Test.Feature.Basket</stat>
 </suite>
 </statistics>
 <errors>
