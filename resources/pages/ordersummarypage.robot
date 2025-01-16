@@ -3,10 +3,11 @@ Library     SeleniumLibrary
 Library     Collections
 Library     yaml
 Library    OperatingSystem
-# Library    ../resources/testingData.py
+Library    ../resources/testingData.py
 Resource  ../Locator/ordersummaryLocator.robot
 
-
+*** Variables ***
+${TAX_PERCENTAGE}    0.08
 
 *** Keywords ***
 user input data customer for information checkout on Order Summary Page
@@ -20,22 +21,30 @@ user click button continue on Order Summary Page
 user click cancel submit information customer on Order Summary Page  
     Click Element    ${BUTTON_CANCEL}
 
-user should see product qty on Order Summary Page
-    ${qty}    Get Text        ${LABEL_PRODUCT_QTY}
-    Should Be Equal As Integers    ${qty}    ${LABEL_PRODUCT_QTY}
+user should see quantity product on Order Summary Page
+    ${qty}    Get Product Quantity
+    Should Be Equal    ${qty}    ${LABEL_PRODUCT_QTY}
 
 user should see sub total product price on Order Summary Page
-    Element Should Be Visible    ${LABEL_SUBTOTAL_PRODUCT}
-    Get Text    ${LABEL_SUBTOTAL_PRODUCT}
+    ${product-price}    Get Product Price
+    ${Qty}    Get Product Quantity
+    ${sub-total}    Evaluate    ${product-price} * ${Qty}
+    Should Be Equal    ${sub-total}    ${LABEL_SUBTOTAL_PRODUCT}
+    Set Total Amount    ${sub-total}
 
 the calculation of tax is correct on Order Summary Page
-    Get Text    ${LABEL_TAX}
-
-the calculation of total amount is correct on Order Summary Page
-    Get Text    ${LABEL_TOTAL_AMOUNT} 
-    # set product
+    ${total-amount}     Get Total Amount
+    ${tax-actual}    Evaluate    ${total-amount} * ${TAX_PERCENTAGE}
+    Should Be Equal     ${tax-actual}    ${LABEL_TAX} 
+    Set Tax Product    ${tax-actual}
     
 
+user should see product price on Order Summary Page
+    ${product-price}    Get Product Price
+    Should Be Equal     ${product-price}    ${LABEL_PRODUCT_PRICE}
 
-
-
+the calculation of total amoun is correts on Order Summary Page
+    ${actual-product-price}    Get Product Price
+    ${actual-tax-product}      Get Tax Product
+    ${actual-total-amount}    Evaluate     ${actual-product-price} + ${actual-tax-product}
+    Should Be Equal    ${actual-total-amount}    ${LABEL_TOTAL_AMOUNT}

@@ -1,14 +1,29 @@
-# *** Settings ***
-# Library    ../resources/testingData.py
-# Library    SeleniumLibrary
+*** Settings ***
+Library    SeleniumLibrary
+Library    GherkinParser
+Library    Collections
+Resource    ../resources/pages/loginpage.robot
+Resource    ../config/testingData.robot
+Resource    ../resources/pages/dashboardpage.robot
+Resource    ../resources/pages/basketpage.robot
+Resource    ../resources/pages/ordersummarypage.robot
 
-# *** Test Cases ***
-# Set And Get Product Details
-#     [Documentation]    Test setting and getting product details
-#     Set Product Details    Laptop    1000.0    2    100.0
-#     ${details}=    Get Product Details
-#     Should Be Equal    ${details['name']}    Laptop
-#     Should Be Equal As Numbers    ${details['price']}    1000.0
-#     Should Be Equal As Numbers    ${details['quantity']}    2
-#     Should Be Equal As Numbers    ${details['tax']}    100.0
-#     Should Be Equal As Numbers    ${details['total_amount']}    2100.0
+*** Test Cases ***
+Scenario : the calculation of subtotal product on Order Summary Page
+    [Setup]  user login to application     ${STANDARD_USER}    ${PASSWORD}
+    Given user on Dasboard Page
+    When user click button atc on Dashboard Page
+    And user click button basket in rigth on Dashboard Page
+    And user should see "product1" name on Basket Page
+    Then user should see "product1" price on Basket Page
+    And user should see product qty on Basket Page
+    When user click button checkout on Basket Page
+    And user input data customer for information checkout on Order Summary Page
+    And user click button continue on Order Summary Page
+    And user should see product price on Order Summary Page
+    And user should see quantity product on Order Summary Page
+    Then the calculation of tax is correct on Order Summary Page
+    Then the calculation of total amoun is correts on Order Summary Page
+
+
+
