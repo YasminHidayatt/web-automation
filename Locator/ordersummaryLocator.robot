@@ -1,0 +1,16 @@
+*** Variables ***
+
+${INPUT_FIRST_NAME}         //input[@data-test='firstName']
+${INPUT_LAST_NAME}          //input[@data-test='lastName']
+${INPUT_POSTAL_CODE}        //input[@data-test='postalCode']
+${BUTTON_SUBMIT}            //input[@data-test='continue']
+${BUTTON_CANCEL}            //button[@data-test='cancel']
+${LABEL_PRODUCT_QTY}        //div[@data-test='item-quantity']
+${LABEL_PRODUCT_PRICE}      //div[@data-test='inventory-item-price']
+${LABEL_SUBTOTAL_PRODUCT}   //div[@data-test='inventory-item-price']
+${LABEL_TAX}                //div[@data-test='tax-label']
+${LABEL_TOTAL_AMOUNT}       //div[@data-test='total-label']
+${BUTTON_PAYMENT}           //button[@data-test='finish']
+${BUTTON_CANCEL_PAYEMENT}   //button[@data-test='cancel']
+${LABEL_SUCCES_ORDER}       //h2[@data-test='complete-header']
+${BUTTON_BACK_TO_HOME}      //button[@data-test='back-to-products']

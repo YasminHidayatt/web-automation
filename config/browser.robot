@@ -2,13 +2,15 @@
 Library  SeleniumLibrary
 
 *** Variables ***
+${browser}                  Chrome
 ${chrome_browser}           https://www.saucedemo.com/
 
 *** Keywords ***
 user open Browser
     # Start Testcase Headless
-    Open Browser
-    go to   ${chrome_browser}
+    # Open Browser
+    Open Browser    ${chrome_browser}    ${browser}
+    # go to   ${chrome_browser}
 Finish Testcase
     close browser
 Start Testcase Headless
